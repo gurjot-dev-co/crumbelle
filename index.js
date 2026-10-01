@@ -36,14 +36,29 @@ async function startServer() {
     app.use(vite.middlewares);
     
     // const { Pool } = pg;   // destructuring    
-    const pool = new pg.Pool ({
-        user: process.env.DB_USER,
-        host: process.env.DB_HOST,
-        database: process.env.DB_NAME,
-        password: process.env.DB_PASSWORD,
-        port: process.env.DB_PORT
-    });
+    // const pool = new pg.Pool ({
+    //     user: process.env.DB_USER,
+    //     host: process.env.DB_HOST,
+    //     database: process.env.DB_NAME,
+    //     password: process.env.DB_PASSWORD,
+    //     port: process.env.DB_PORT
+    // });
     
+
+    const pool = new pg.Pool(
+        process.env.DATABASE_URL
+            ? {
+                connectionString: process.env.DATABASE_URL
+            }
+            : {
+                user: process.env.DB_USER,
+                host: process.env.DB_HOST,
+                database: process.env.DB_NAME,
+                password: process.env.DB_PASSWORD,
+                port: process.env.DB_PORT
+            }
+    );
+
     async function verifyOtp(identifier, otp, purpose) {
         if (!otp || !otp.trim()) {
             return {
