@@ -1,0 +1,24 @@
+<%- include("partials/header.ejs"); %>
+
+<section class="category-hero">
+    <div class="category-hero-container">
+
+        <div class="category-hero-content">
+            <span class="category-hero-label">Explore Crumbelle</span>
+            <h1><%= category.name %></h1>
+            <p><%= category.description %></p>
+        </div>
+
+        <div class="category-hero-image">
+            <img src="<%= category.hero_image %>" alt="<%= category.name %>" width="660px">
+        </div>
+        
+    </div>
+</section>
+
+
+<section class="products-section">
+    <div id="product-grid" data-category="<%= category.name %>"></div>
+</section>
+
+<%- include("partials/footer.ejs") %>

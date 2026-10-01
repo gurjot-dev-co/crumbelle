@@ -1,0 +1,319 @@
+.cart-page {
+    min-height: calc(100vh - 94px);
+    padding: 65px 45px 90px;
+    background: var(--cream);
+    color: var(--brown-dark);
+}
+
+.cart-container {
+    width: min(1200px, 100%);
+    margin: 0 auto;
+}
+
+.cart-title {
+    margin: 0 0 40px;
+    font-family: "Playfair Display", serif;
+    font-size: 44px;
+    font-weight: 500;
+    color: var(--brown-dark);
+}
+
+.cart-header {
+    display: grid;
+    grid-template-columns: minmax(300px, 1fr) 130px 120px 130px;
+    gap: 25px;
+    padding: 0 0 16px;
+    border-bottom: 1.6px solid rgba(45, 30, 21, 0.18);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.64px;
+    color: var(--brown-medium);
+}
+
+.cart-product-heading {
+    text-align: left;
+}
+
+.cart-item {
+    display: grid;
+    grid-template-columns: minmax(300px, 1fr) 155px 120px 130px;
+    gap: 25px;
+    align-items: center;
+    min-height: 150px;
+    padding: 25px 0;
+    border-bottom: 1.4px solid rgba(45, 30, 21, 0.11);
+}
+
+.cart-product {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.cart-product-image {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    background-color: var(--cream-soft);
+}
+
+.cart-product-info {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.cart-product-name {
+    color: var(--brown-dark);
+    font-family: "Playfair Display", serif;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.cart-product-name:hover {
+    color: var(--brown-medium);
+}
+
+.remove-item-button {
+    width: fit-content;
+    border: none;
+    background: none;
+    color: #80695a;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.remove-item-button:hover {
+    color: #8A3D32;
+    text-decoration: underline;
+}
+
+.cart-quantity {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    border: 1px solid rgba(45, 30, 21, 0.2);
+}
+
+.quantity-button {
+    width: 28px;
+    height: 30px;
+    border: none;
+    background: transparent;
+    color: var(--brown-dark);
+    font-size: 20px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.quantity-button:hover {
+    background: var(--cream-soft);
+}
+
+.quantity-value {
+    min-width: 32px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.cart-item-price,
+.cart-item-total {
+    font-size: 14px;
+}
+
+.cart-item-total {
+    font-weight: 600;
+}
+
+.cart-summary {
+    width: 280px;
+    margin: 42px 0 0 auto;
+}
+
+.summary-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 0;
+    font-size: 14px;
+}
+
+.summary-divider {
+    margin: 13px 0;
+    border-top: 1.6px solid rgba(45, 30, 21, 0.18);
+}
+
+.summary-total {
+    padding-top: 13px;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.cart-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.cart-actions > a {
+    display: inline-flex;
+    text-decoration: none;
+    width: 100%;
+    padding: 14px 22px;
+    font: inherit;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.checkout-button {
+    border: 1px solid var(--brown-dark);
+    background-color: var(--brown-dark);
+    color: var(--cream);
+    transition: 
+        background-color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.checkout-button:hover {
+    background-color: var(--brown-medium);
+    border-color: var(--brown-medium);
+}
+
+/* empty cart */
+.empty-cart {
+    padding: 80px 30px;
+    border-top: 1.6px solid rgba(45, 30, 21, 0.16);
+    border-bottom: 1.6px solid rgba(45, 30, 21, 0.16);
+    text-align: center;
+}
+
+.empty-cart h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.empty-cart p {
+    margin: 14px 0 26px;
+    color: #66574c;
+    font-size: 14px;
+}
+
+.continue-shopping-button {
+    display: inline-block;
+    padding: 13px 24px;
+    background-color: var(--brown-dark);
+    color: var(--cream);
+    font-size: 16px;
+    text-decoration: none;
+}
+
+/* loading or error */
+.cart-loading,
+.cart-error {
+    text-align: center;
+    color: var(--brown-medium);
+    font-size: 15px;
+}
+
+@media (max-width: 1050px) {
+    .cart-page {
+        padding: 55px 35px 75px;
+    }
+    .cart-header,
+    .cart-item {
+        grid-template-columns: minmax(250px, 1fr) 110px 100px 110px;
+        gap: 18px;
+    }
+    .cart-summary {
+        width: 350px;
+    }
+}
+
+@media (max-width: 750px) {
+    .cart-page {
+        padding: 45px 25px 65px;
+    }
+    .cart-title {
+        font-size: 38px;
+        margin-bottom: 30px;
+    }
+    .cart-header {
+        display: none;
+    }
+    .cart-item {
+        grid-template-columns: 1fr auto;
+        gap: 15px 20px;
+        padding: 22px 0;
+    }
+    .cart-product {
+        grid-column: 1 / -1;
+    }
+    .cart-quantity {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    .cart-item-price {
+        grid-column: 2;
+        grid-row: 2;
+        text-align: right;
+    }
+    .cart-item-total {
+        grid-column: 2;
+        grid-row: 3;
+        text-align: right;
+    }
+    .cart-summary {
+        width: 100%;
+        margin-top: 35px;
+    }
+}
+
+@media (max-width: 420px) {
+    .cart-page {
+        padding: 30px 18px 50px;
+    }
+    .cart-title {
+        font-size: 32px;
+        margin-bottom: 25px;
+    }
+    .cart-product-image {
+        width: 72px;
+        height: 72px;
+    }
+    .cart-product {
+        gap: 13px;
+    }
+    .cart-product-name {
+        font-size: 16px;
+    }
+    .remove-item-button {
+        font-size: 11px;
+    }
+    .cart-item {
+        gap: 13px 15px;
+        padding: 18px 0;
+    }
+    .quantity-button {
+        width: 27px;
+        height: 29px;
+    }
+    .quantity-value {
+        min-width: 30px;
+    }
+    .cart-item-price,
+    .cart-item-total,
+    .summary-row {
+        font-size: 13px;
+    }
+    .summary-total {
+        font-size: 16px;
+    }
+    .empty-cart {
+        padding: 60px 15px;
+    }
+    .empty-cart h2 {
+        font-size: 26px;
+    }
+}

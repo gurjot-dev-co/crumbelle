@@ -1,0 +1,199 @@
+<%- include("partials/header.ejs") %>
+
+<main class="minor-page contact-page">
+
+    <div class="minor-page-container">
+
+        <div class="minor-page-header">
+            <span class="minor-page-eyebrow">GET IN TOUCH</span>
+            <h1 class="minor-page-title">We'd love to hear from you.</h1>
+            <p class="minor-page-intro">Have a question about an order, need help choosing something, or simply want to say hello? 
+                Send us a message and we'll be happy to help.
+            </p>
+        </div>
+
+        <section class="minor-page-section contact-main-section">
+            <div class="contact-grid">
+
+                <div class="contact-information">
+                    <span class="minor-page-section-label">LET'S TALK</span>
+                    <h2 class="minor-page-section-title">We're here for the little details.</h2>
+                    <p class="minor-page-text">Whether you're checking on an order, planning a celebration, or have a question about 
+                        our bakes, we're always happy to help.
+                    </p>
+                    <div class="contact-details-list">
+
+                        <!-- email -->
+                        <div class="contact-detail">
+                            <div class="contact-detail-icon">
+                                <i class="fa-regular fa-envelope"></i>
+                            </div>
+                            <div class="contact-detail-content">
+                                <span class="contact-detail-label">EMAIL</span>
+                                <a href="mailto:crumbelle.store@gmail.com">crumbelle.store@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <!-- phone -->
+                        <div class="contact-detail">
+                            <div class="contact-detail-icon">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div class="contact-detail-content">
+                                <span class="contact-detail-label">
+                                    PHONE
+                                </span>
+                                <a href="tel:+910000000000">+91 00000 00000</a>
+                            </div>
+                        </div>
+
+                        <!-- support -->
+                        <div class="contact-detail">
+                            <div class="contact-detail-icon">
+                                <i class="fa-regular fa-clock"></i>
+                            </div>
+                            <div class="contact-detail-content">
+                                <span class="contact-detail-label">RESPONSE TIME</span>
+                                <span>We aim to respond as soon as possible.</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- social -->
+                    <div class="contact-social">
+                        <span class="contact-detail-label">FOLLOW ALONG</span>
+                        <div class="contact-social-links">
+                            <a href="https://www.instagram.com/gurjot.dev.co/" aria-label="Instagram">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/gurjot-dev/" aria-label="Facebook">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- contact form  -->
+                <div class="contact-form-wrapper">
+
+                    <div class="contact-form-header">
+                        <span class="minor-page-section-label">SEND A MESSAGE</span>
+                        <h2>How can we help?</h2>
+                    </div>
+
+                    <form class="contact-form">
+                        <div class="contact-form-row">
+                            <div class="contact-form-group">
+                                <label for="contact-name">Full Name</label>
+                                <input type="text" id="contact-name" name="name" placeholder="Enter your name" required />
+                            </div>
+                            <div class="contact-form-group">
+                                <label for="contact-email">Email Address</label>
+                                <input type="email" id="contact-email" name="email" placeholder="Enter your email" required />
+                            </div>
+                        </div>
+
+                        <div class="contact-form-group">
+                            <label for="contact-order">Order Number <span>(Optional)</span></label>
+                            <input type="text" id="contact-order" name="orderNumber" placeholder="e.g. CRB123456" />
+                        </div>
+
+                        <div class="contact-form-group">
+                            <label for="contact-subject">Subject</label>
+                            <select id="contact-subject" name="subject"required >
+                                <option value="" disabled selected>Select a subject</option>
+                                <option value="order">Order enquiry</option>
+                                <option value="product">Product question</option>
+                                <option value="delivery">Shipping & delivery</option>
+                                <option value="refund">Returns & refunds</option>
+                                <option value="general">General enquiry</option>
+                                <option value="other">Something else</option>
+                            </select>
+                        </div>
+
+                        <div class="contact-form-group">
+                            <label for="contact-message">Message</label>
+                            <textarea id="contact-message" name="message" rows="6" maxlength="1000" placeholder="Tell us how we can help..."required></textarea>
+                        </div>
+
+                        <button type="submit" class="minor-page-primary-button contact-submit-button">
+                            Send Message
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+
+                    </form>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- quick links  -->
+        <section class="minor-page-section contact-help-section">
+
+            <div class="minor-page-section-heading">
+                <span class="minor-page-section-label">NEED HELP WITH SOMETHING SPECIFIC?</span>
+                <h2 class="minor-page-section-title">You might find your answer here.</h2>
+                <p class="minor-page-section-intro">For common questions, delivery information, returns, refunds, and order updates, 
+                    have a look through our helpful pages.
+                </p>
+            </div>
+
+            <div class="contact-help-grid">
+                <a href="/faqs" class="contact-help-card">
+                    <div class="contact-help-card-icon">
+                        <i class="fa-regular fa-circle-question"></i>
+                    </div>
+                    <div>
+                        <h3>FAQs</h3>
+                        <p>Find quick answers to common questions.</p>
+                    </div>
+                    <i class="fa-solid fa-arrow-right contact-help-arrow"></i>
+                </a>
+                <a href="/shipping-delivery" class="contact-help-card">
+                    <div class="contact-help-card-icon">
+                        <i class="fa-solid fa-truck"></i>
+                    </div>
+                    <div>
+                        <h3>Shipping & Delivery</h3>
+                        <p>Learn about delivery and shipping information.</p>
+                    </div>
+                    <i class="fa-solid fa-arrow-right contact-help-arrow"></i>
+                </a>
+                <a href="/returns-refunds" class="contact-help-card">
+                    <div class="contact-help-card-icon">
+                        <i class="fa-solid fa-rotate-left"></i>
+                    </div>
+                    <div>
+                        <h3>Returns & Refunds</h3>
+                        <p>See our return and refund information.</p>
+                    </div>
+                    <i class="fa-solid fa-arrow-right contact-help-arrow"></i>
+                </a>
+                <a href="/order-tracking" class="contact-help-card">
+                    <div class="contact-help-card-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div>
+                        <h3>Track Your Order</h3>
+                        <p>Check the progress of your order.</p>
+                    </div>
+                    <i class="fa-solid fa-arrow-right contact-help-arrow"></i>
+                </a>
+
+            </div>
+
+        </section>
+
+        <section class="minor-page-closing">
+            <span class="minor-page-closing-eyebrow">FROM CRUMBELLE, WITH LOVE</span>
+            <h2>Every question deserves a thoughtful answer.</h2>
+            <p>We're always happy to help make your Crumbelle experience a little easier and a lot sweeter.</p>
+        </section>
+
+    </div>
+
+</main>
+
+<%- include("partials/footer.ejs") %>

@@ -1,0 +1,79 @@
+<%- include("partials/header.ejs") %>
+
+<main class="auth-page">
+    <div class="auth-container">
+        
+        <span class="auth-label">Welcome Back to Crumbelle</span>
+        <h1>Log In</h1>
+        <p class="auth-description">Sign in to access your account, view your orders, and keep your favorite Crumbelle treats close.</p>
+
+        <% if (error === "invalid") { %>
+            <p class="auth-error">Invalid email or phone number or password.</p>
+        <% } else if (error === "invalidOtp") { %>
+            <p class="auth-error">Invalid OTP. Please try again.</p>        
+        <% } else if (error === "expiredOtp") { %>
+            <p class="auth-error">The OTP has expired. Please request a new one.</p>
+        <% } else if (error === "otpRequired") { %>
+            <p class="auth-error">Please enter the OTP.</p>      
+        <% } else if (error === "server") { %>
+            <p class="auth-error">Something went wrong. Please try again.</p>
+        <% } %>
+
+        <div id="otp-message" class="auth-success" style="display: none;"></div>
+
+        <form action="/login" class="auth-form" method="POST">
+            <div class="form-group" id="password-identifier">
+                <label for="identifier">Email or Phone Number</label>
+                <input type="text" id="identifier" name="identifier" placeholder="Enter your email or phone number" autocomplete="username" required/>
+            </div>
+
+            <div id="password-login">
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" autocomplete="current-password" required />
+                </div>
+                <button type="submit" class="auth-button" name="loginmethod" value="password">Log In</button>
+            </div>
+
+            <div class="login-divider">
+                <span>OR</span>
+            </div>
+
+            <div class="otp-login" id="otp-login">
+                <button type="button" class="otp-login-button" id="show-otp-login">Log In With OTP</button>
+            </div>
+
+            <div id="otp-login-form">
+                <div class="form-group" id="otp-identifier">
+                    <label for="otpEmail">Email Address</label>
+                    <div class="otp-row">
+                        <input type="email" id="otpEmail" name="otpEmail" placeholder="Enter your email" autocomplete="email" disabled/>
+                    </div>
+                    <label for="otp">OTP</label>
+                    <div class="otp-row">
+                        <input type="text" name="otp" id="otp" placeholder="Enter a 6-digit OTP" inputmode="numeric" autocomplete="one-time-code" maxlength="6" disabled>
+                        <button type="button" class="otp-button" id="send-login-otp">Send OTP</button>
+                    </div>
+                    <% if (otp === "sent" || otp === "resent") { %>
+                        <button type="button" class="resend-otp-button" id="resend-login-otp">Resend OTP</button>
+                    <% } %>
+                </div>
+                <button type="submit" class="auth-button" name="loginmethod" value="otp">Log In With OTP</button>
+
+                <div class="otp-login-divider">
+                    <span>OR</span>
+                </div>
+                
+                <button type="button" class="otp-login-button" id="show-password-login">Log In With Password</button>
+            </div>
+        </form>
+
+        <p class="auth-switch">
+            Don't have an account ?
+            <a href="/signup">Sign Up</a>
+        </p>
+
+    </div>
+</main>
+
+<%- include("partials/footer.ejs") %>

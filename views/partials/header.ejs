@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crumbelle</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/shop.css">
+    <link rel="stylesheet" href="/styles/product.css">
+    <link rel="stylesheet" href="/styles/cart-page.css">
+    <link rel="stylesheet" href="/styles/checkout.css">
+    <link rel="stylesheet" href="/styles/favourites.css">
+    <link rel="stylesheet" href="/styles/shop-all-categories.css">
+    <link rel="stylesheet" href="/styles/order-success-page.css">
+    <link rel="stylesheet" href="/styles/minor-pages.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-container">
+
+            <!-- Mobile Menu -->
+            <button class="menu-button header-icon" type="button" aria-label="Open menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav class="main-nav">
+                <a href="/">Home</a>
+                <a href="/shop">Shop</a>
+                <a href="/about">About</a>
+            </nav>
+
+            <a href="/" class="logo">
+                <img src="/assets/logo/logo.png" alt="Crumbelle">
+            </a>
+
+            <nav class="right-nav">
+
+                <% if (userId) { %>
+                    <span class="user-greeting">Hi, <%= userName %></span>
+                    <a href="/logout">Log Out</a>
+                <% } else { %>
+                    <a href="/signup">Sign Up</a>
+                    <a href="/login">Log In</a>
+                <% } %>
+
+                     <!-- Search -->
+                <div class="header-search">
+                    <form class="header-search-form">
+                        <i class="fa-solid fa-magnifying-glass header-search-icon"></i>
+                        <input type="search" id="header-search-input" placeholder="Search cakes, cookies, brownies..."
+                            autocomplete="off" aria-label="Search products" />
+                        <div class="search-suggestions"></div>
+                    </form>
+                </div>
+
+                <a href="/favourites" class="header-icon wishlist-icon" aria-label="Wishlist">
+                    <i class="fa-solid fa-heart"></i>
+                    <span class="favourite-count">0</span>
+                </a>
+
+                <a href="/cart" class="header-icon cart-icon" aria-label="Shopping cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-count">0</span>
+                </a>
+            </nav>
+
+        </div>
+
+
+        <!-- mobile menu -->
+        <nav class="mobile-menu">
+            <a href="/">Home</a>    
+            <a href="/shop">Shop</a>
+            <a href="/about">About</a>
+            <% if (userId) { %>
+                <a href="/logout">Log Out</a>
+            <% } else { %>
+                <a href="/signup">Sign Up</a>
+                <a href="/login">Log In</a>
+            <% } %>
+        </nav>
+    </header>

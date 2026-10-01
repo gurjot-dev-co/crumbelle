@@ -1,0 +1,130 @@
+<%- include("partials/header.ejs") %>
+
+<main class="minor-page order-tracking-page">
+
+    <div class="minor-page-container">
+
+        <div class="minor-page-header">
+            <span class="minor-page-eyebrow">ORDER TRACKING</span>
+            <h1 class="minor-page-title">
+                Follow your order,<br>
+                from oven to door.
+            </h1>
+            <p class="minor-page-intro">Enter your order number below to check the latest status of your Crumbelle order.</p>
+        </div>
+
+        <!-- tracking form  -->
+        <section class="minor-page-section tracking-search-section">
+            <div class="tracking-search-box">
+                <span class="minor-page-section-label">TRACK AN ORDER</span>
+                <h2 class="minor-page-section-title">Where's your order?</h2>
+                <p class="tracking-search-intro">Your order number can be found on your order confirmation page after a successful purchase.</p>
+
+                <form class="tracking-form">
+                    <div class="tracking-input-group">
+                        <label for="order-number">Order Number</label>
+                        <input type="text" id="order-number" name="order-number" placeholder="Enter your order number" autocomplete="off" />
+                    </div>
+                    <button type="submit" class="minor-page-primary-button tracking-button">
+                        Track Order
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- tracking result  -->
+        <section class="minor-page-section tracking-result-section">
+
+            <div class="minor-page-section-heading">
+                <span class="minor-page-section-label">ORDER STATUS</span>
+                <h2 class="minor-page-section-title">Your order journey</h2>
+            </div>
+
+            <div class="tracking-order-summary">
+                <div class="tracking-order-info">
+                    <span class="tracking-order-label">ORDER NUMBER</span>
+                    <strong>#CRMB-0000</strong>
+                </div>
+                <div class="tracking-order-info">
+                    <span class="tracking-order-label">CURRENT STATUS</span>
+                    <strong class="tracking-current-status">Preparing</strong>
+                </div>
+            </div>
+
+            <div class="tracking-timeline">
+
+                <div class="tracking-step completed">
+                    <div class="tracking-step-marker">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                    <div class="tracking-step-content">
+                        <span class="tracking-step-number">01</span>
+                        <h3>Order placed</h3>
+                        <p>Your order has been successfully received by Crumbelle.</p>
+                    </div>
+                </div>
+
+                <div class="tracking-step active">
+                    <div class="tracking-step-marker">
+                        <i class="fa-solid fa-bread-slice"></i>
+                    </div>
+                    <div class="tracking-step-content">
+                        <span class="tracking-step-number">02</span>
+                        <h3>Preparing your order</h3>
+                        <p>Our team is preparing your freshly baked items with care.</p>
+                    </div>
+                </div>
+
+                <div class="tracking-step">
+                    <div class="tracking-step-marker">
+                        <i class="fa-solid fa-box"></i>
+                    </div>
+                    <div class="tracking-step-content">
+                        <span class="tracking-step-number">03</span>
+                        <h3>Packed</h3>
+                        <p>Your order will be carefully packed and prepared for delivery.</p>
+                    </div>
+                </div>
+
+                <div class="tracking-step">
+                    <div class="tracking-step-marker">
+                        <i class="fa-solid fa-truck"></i>
+                    </div>
+                    <div class="tracking-step-content">
+                        <span class="tracking-step-number">04</span>
+                        <h3>Out for delivery</h3>
+                        <p>Your order is on its way to the delivery address provided at checkout.</p>
+                    </div>
+                </div>
+
+                <div class="tracking-step">
+                    <div class="tracking-step-marker">
+                        <i class="fa-solid fa-house"></i>
+                    </div>
+                    <div class="tracking-step-content">
+                        <span class="tracking-step-number">05</span>
+                        <h3>Delivered</h3>
+                        <p>Your Crumbelle order has reached its destination. Time to enjoy.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section class="minor-page-closing tracking-closing">
+            <span class="minor-page-closing-eyebrow">CAN'T FIND YOUR ORDER?</span>
+            <h2>Need a little help?</h2>
+            <p>Make sure you've entered the correct order number. If you're still having trouble, our team is happy to help.</p>
+            <a href="/contact" class="minor-page-primary-button">
+                Contact Us
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </section>
+
+    </div>
+
+</main>
+
+<%- include("partials/footer.ejs") %>

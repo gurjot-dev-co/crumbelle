@@ -1,0 +1,300 @@
+<%- include("partials/header.ejs") %>
+
+<main class="minor-page terms-page">
+
+    <div class="minor-page-container">
+
+        <div class="minor-page-header">
+            <span class="minor-page-eyebrow">TERMS & CONDITIONS</span>
+            <h1 class="minor-page-title">
+                The little details<br>
+                behind every order.
+            </h1>
+            <p class="minor-page-intro">These Terms & Conditions explain the rules that apply when you use Crumbelle, create an account, 
+                browse our products, or place an order through our website.
+            </p>
+        </div>
+
+        <!-- intro  -->
+        <section class="minor-page-section terms-intro">
+            <div class="terms-intro-content">
+                <span class="minor-page-section-label">PLEASE READ</span>
+                <h2 class="minor-page-section-title">A few things worth knowing before you order.</h2>
+                <p>By accessing or using the Crumbelle website, you agree to follow these Terms & Conditions and any applicable
+                    policies referenced on the website.
+                </p>
+                <p>These terms apply to your use of the website, your Crumbelle account, and purchases made through our online store.</p>
+                <span class="terms-updated">
+                    Last updated:
+                    <%= new Date().toLocaleString('en-IN', { month: 'long', year: 'numeric' }) %>
+                </span>
+            </div>
+        </section>
+
+
+        <section class="minor-page-section terms-section">
+
+            <div class="minor-page-section-heading">
+                <span class="minor-page-section-label">USING CRUMBELLE</span>
+                <h2 class="minor-page-section-title">Using the website responsibly.</h2>
+            </div>
+            
+            <div class="terms-list">
+
+                <div class="terms-item">
+                    <span class="terms-item-number">01</span>
+                    <div class="terms-item-content">
+                        <h3>Account information</h3>
+                        <p>If you create an account, you are responsible for providing accurate information and for keeping your
+                            account credentials reasonably secure.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="terms-item">
+                    <span class="terms-item-number">02</span>
+                    <div class="terms-item-content">
+                        <h3>Accurate details</h3>
+                        <p>Information provided while creating an account, placing an order, or contacting us should be accurate and 
+                            complete so that we can provide the requested service.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="terms-item">
+                    <span class="terms-item-number">03</span>
+                    <div class="terms-item-content">
+                        <h3>Lawful use</h3>
+                        <p>You must not use the website for unlawful purposes, to interfere with its operation, or to attempt
+                            unauthorized access to accounts, systems, or data.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="terms-item">
+                    <span class="terms-item-number">04</span>
+                    <div class="terms-item-content">
+                        <h3>Account security</h3>
+                        <p>Please contact us promptly if you believe your account has been accessed or used without your authorization.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="minor-page-section terms-section">
+
+            <div class="minor-page-section-heading">
+                <span class="minor-page-section-label">PRODUCTS</span>
+                <h2 class="minor-page-section-title">About our products and listings.</h2>
+            </div>
+
+            <div class="terms-text-block">
+                <p>We make reasonable efforts to present product descriptions, images, prices, weights, and other product information
+                    accurately. However, minor differences in appearance, colour, decoration, or presentation may occur, particularly
+                    with handmade or freshly prepared products.
+                </p>
+                <p>Product availability may change from time to time. Displaying a product on the website does not necessarily
+                    guarantee that it will remain available when you complete your purchase.
+                </p>
+                <p>Where an ingredient, allergen, dietary characteristic, weight, or other product detail is important to your purchase 
+                    decision, please review the information provided for that product and contact us when further clarification is needed.
+                </p>
+            </div>
+
+        </section>
+
+
+        <section class="minor-page-section terms-section">
+
+            <div class="minor-page-section-heading">
+                <span class="minor-page-section-label">ORDERS & PRICING</span>
+                <h2 class="minor-page-section-title">Placing and paying for an order.</h2>
+            </div>
+
+            <div class="terms-numbered-grid">
+
+                <div class="terms-numbered-card">
+                    <span class="terms-card-number">01</span>
+                    <h3>Product prices</h3>
+                    <p>Prices displayed on the website are the prices applicable at the time of purchase, subject to any clearly stated 
+                        taxes, delivery charges, or other applicable fees.
+                    </p>
+                </div>
+
+                <div class="terms-numbered-card">
+                    <span class="terms-card-number">02</span>
+                    <h3>Order acceptance</h3>
+                    <p>An order is subject to successful submission and acceptance through the website. We may contact you if there is 
+                        an issue affecting the order.
+                    </p>
+                </div>
+
+                <div class="terms-numbered-card">
+                    <span class="terms-card-number">03</span>
+                    <h3>Payment</h3>
+                    <p>Available payment methods are shown at checkout. You agree to provide the information required to complete your 
+                        selected payment method.
+                    </p>
+                </div>
+
+                <div class="terms-numbered-card">
+                    <span class="terms-card-number">04</span>
+                    <h3>Order confirmation</h3>
+                    <p>After a successful order, you will receive or be shown confirmation details such as your order number and order total.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="minor-page-section terms-section">
+            <div class="terms-highlight">
+                <span class="minor-page-section-label">DELIVERY</span>
+                <h2 class="minor-page-section-title">Every order has a journey.</h2>
+                <p>Delivery availability, charges, preparation times, and estimated delivery information are presented through
+                    the website where applicable.
+                </p>
+                <p>Delivery times may vary depending on your location, product selection, preparation requirements, and other
+                    circumstances affecting the delivery process.
+                </p>
+                <a href="/shipping-delivery" class="terms-inline-link">
+                    View Shipping & Delivery
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </section>
+
+
+        <section class="minor-page-section terms-section">
+            <div class="minor-page-section-heading">
+                <span class="minor-page-section-label">CANCELLATIONS</span>
+                <h2 class="minor-page-section-title">Need to change your order?</h2>
+            </div>
+            <div class="terms-text-block">
+                <p>Please contact us as soon as possible if you need to cancel or change an order.</p>
+                <p>Because bakery products may begin preparation shortly after an order is placed, cancellation or modification
+                    may not always be possible once preparation has started.
+                </p>
+                <p>Any cancellation, refund, or other resolution will be handled in accordance with the applicable Crumbelle
+                    policy and applicable law.
+                </p>
+            </div>
+        </section>
+
+
+        <section class="minor-page-section terms-section">
+            <div class="terms-highlight">
+                <span class="minor-page-section-label">RETURNS & REFUNDS</span>
+                <h2 class="minor-page-section-title">Something isn't right?</h2>
+                <p>Bakery products may be subject to specific return and refund conditions because they are prepared for consumption.
+                    Issues involving damaged, incorrect, or otherwise affected orders should be reported promptly.
+                </p>
+                <p>Please refer to our Returns & Refunds page for the applicable process and information.</p>
+                <a href="/returns-refunds" class="terms-inline-link">
+                    View Returns & Refunds
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- intellectual property -->
+        <section class="minor-page-section terms-section">
+            <div class="minor-page-section-heading">
+                <span class="minor-page-section-label">WEBSITE CONTENT</span>
+                <h2 class="minor-page-section-title">Our content and brand.</h2>
+            </div>
+            <div class="terms-text-block">
+                <p>Unless otherwise stated, the Crumbelle website and its content, including branding, logos, graphics, photographs,
+                    written content, design elements, and original materials, are owned by or used by Crumbelle with appropriate rights.
+                </p>
+                <p>You may access the website for personal and lawful use. You should not copy, reproduce, distribute, modify, or
+                    commercially exploit Crumbelle content without appropriate permission.
+                </p>
+            </div>
+        </section>
+
+
+        <section class="minor-page-section terms-section">
+            <div class="minor-page-section-heading">
+                <span class="minor-page-section-label">THIRD-PARTY SERVICES</span>
+                <h2 class="minor-page-section-title">Some parts of the experience may rely on others.</h2>
+            </div>
+            <div class="terms-text-block">
+                <p>Certain website functions may depend on third-party services, such as payment processing, hosting, communications, 
+                    delivery, or other technical services.
+                </p>
+                <p>Those services may have their own terms, conditions, and privacy practices. Where applicable, their use may also be 
+                    subject to those third-party terms.
+                </p>
+            </div>
+        </section>
+
+
+        <section class="minor-page-section terms-section">
+            <div class="terms-text-block">
+                <span class="minor-page-section-label">WEBSITE AVAILABILITY</span>
+                <h2 class="minor-page-section-title">Things don't always go perfectly online.</h2>
+                <p>We aim to keep Crumbelle available and functioning properly, but temporary interruptions may occur because of maintenance,
+                    technical problems, network issues, or circumstances outside our reasonable control.
+                </p>
+                <p>We may also update, modify, suspend, or discontinue parts of the website or its features from time to time.</p>
+            </div>
+        </section>
+
+
+        <section class="minor-page-section terms-section">
+            <div class="terms-text-block">
+                <span class="minor-page-section-label">IMPORTANT</span>
+                <h2 class="minor-page-section-title">Applicable rights remain protected.</h2>
+                <p>Nothing in these Terms & Conditions is intended to exclude, restrict, or replace any consumer right, remedy, protection,
+                    or requirement that cannot lawfully be excluded or restricted under applicable law.
+                </p>
+            </div>
+        </section>
+
+
+        <section class="minor-page-section terms-section">
+            <div class="terms-text-block">
+                <span class="minor-page-section-label">UPDATES</span>
+                <h2 class="minor-page-section-title">These terms may change.</h2>
+                <p>We may update these Terms & Conditions when our services, website features, business practices, or applicable
+                    requirements change.
+                </p>
+                <p>Updated terms will be published on this page together with a revised "Last updated" date.</p>
+            </div>
+        </section>
+
+
+        <section class="minor-page-section terms-section">
+            <div class="terms-text-block">
+                <span class="minor-page-section-label">APPLICABLE LAW</span>
+                <h2 class="minor-page-section-title">The rules that apply.</h2>
+                <p>These Terms & Conditions are intended to be read together with applicable laws and regulations governing the services
+                    and transactions carried out through the Crumbelle website.
+                </p>
+                <p>Where a dispute or legal issue arises, applicable law and the jurisdiction prescribed by law will determine the
+                    available rights, remedies, and forum.
+                </p>
+            </div>
+        </section>
+
+
+        <section class="minor-page-closing terms-closing">
+            <span class="minor-page-closing-eyebrow">HAVE A QUESTION?</span>
+            <h2>Need clarification?</h2>
+            <p>If you have a question about these terms, your order, or anything else related to Crumbelle, we're happy to help.</p>
+            <a href="/contact" class="minor-page-primary-button">
+                Contact Us
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </section>
+
+    </div>
+
+</main>
+
+<%- include("partials/footer.ejs") %>
