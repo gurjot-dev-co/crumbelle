@@ -255,7 +255,7 @@
 
 
 <!-- newsletter -->
-<section class="newsletter">
+<!-- <section class="newsletter">
     <div class="newsletter-container">
         <span>Stay in the sweet loop</span>
         <h2>A Little Sweetness Delivered.</h2>
@@ -265,7 +265,53 @@
             <button type="submit">Subscribe</button>
         </form>
     </div>
+</section> -->
+<!-- Newsletter Success Popup -->
+<!-- <div class="newsletter-popup" id="newsletterPopup">
+    <div class="newsletter-popup-box">
+        <button class="newsletter-popup-close" id="newsletterPopupClose">&times;</button>
+        <div class="newsletter-popup-icon">✓</div>
+        <h3>You're on the list!</h3>
+        <p>Thank you for subscribing to Crumbelle. Sweet updates are on their way.</p>
+        <button class="newsletter-popup-ok" id="newsletterPopupOk">Lovely!</button>
+    </div>
+</div> -->
+
+
+<section class="newsletter">
+    <div class="newsletter-container">
+        <span>Stay in the sweet loop</span>
+        <h2>A Little Sweetness Delivered.</h2>
+        <p>Sign up for new bakes, seasonal treats and special crumbelle offers.</p>
+
+        <form action="/subscribe" method="POST" class="newsletter-form">
+            <input 
+                type="email" 
+                name="email" 
+                placeholder="Enter your email address" 
+                autocomplete="email" 
+                required
+            >
+            <button type="submit">Subscribe</button>
+        </form>
+    </div>
 </section>
+
+<!-- Newsletter Success Popup -->
+<div class="newsletter-popup" id="newsletterPopup">
+    <div class="newsletter-popup-box">
+        <button class="newsletter-popup-close" id="newsletterPopupClose">&times;</button>
+
+        <div class="newsletter-popup-icon">✓</div>
+
+        <h3>You're on the list!</h3>
+        <p>Thank you for subscribing to Crumbelle. Sweet updates are on their way.</p>
+
+        <button class="newsletter-popup-ok" id="newsletterPopupOk">
+            Lovely!
+        </button>
+    </div>
+</div>
 
 
 <%- include("partials/footer.ejs"); %>

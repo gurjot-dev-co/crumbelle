@@ -472,3 +472,48 @@ async function updateCartCount() {
     }
 }
 updateCartCount();
+
+
+const newsletterForm = document.querySelector(".newsletter-form");
+const newsletterPopup = document.getElementById("newsletterPopup");
+const newsletterPopupClose = document.getElementById("newsletterPopupClose");
+const newsletterPopupOk = document.getElementById("newsletterPopupOk");
+
+newsletterForm.addEventListener("submit", async function (e) {
+    e.preventDefault();
+    const email = newsletterForm.querySelector("input[name='email']").value;
+    try {
+        const response = await fetch("/subscribe", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            body: new URLSearchParams({
+                email: email
+            })
+        });
+
+        const data = await response.json();
+        if (!response.ok || !data.success) throw new Error("Subscription failed");
+
+        newsletterForm.reset();
+        newsletterPopup.classList.add("show");
+
+    } catch (error) {
+        console.error("Newsletter subscription error:", error);
+        alert("Something went wrong. Please try again.");
+    }
+});
+
+function closeNewsletterPopup() {
+    newsletterPopup.classList.remove("show");
+}
+
+newsletterPopupClose.addEventListener("click", closeNewsletterPopup);
+newsletterPopupOk.addEventListener("click", closeNewsletterPopup);
+
+newsletterPopup.addEventListener("click", function (e) {
+    if (e.target === newsletterPopup) {
+        closeNewsletterPopup();
+    }
+});

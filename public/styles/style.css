@@ -627,7 +627,7 @@ body {
 @media (max-width: 750px) {
     .hero {
         height: auto;
-        min-height: 700px;
+        min-height: 470px;
     }
     .hero-container {
         height: auto;
@@ -640,7 +640,8 @@ body {
         width: 45%;
     }
     .hero-image {
-        top: 300px;
+        /* top: 300px; */
+        top: 50px;
         right: -80px;
         height: 330px;
     }
@@ -674,10 +675,11 @@ body {
 /* small mobile */
 @media (max-width: 420px) {
     .hero {
-        min-height: 550px;
+        min-height: 300px;
     }
     .hero-image {
-        top: 265px;
+        /* top: 265px; */
+        top: 30px;
         right: -260px;
     }
     .hero-image img {
@@ -1979,3 +1981,106 @@ body {
 }
 
 
+/* Newsletter Success Popup */
+.newsletter-popup {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+
+    z-index: 9999;
+}
+
+.newsletter-popup.show {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.newsletter-popup-box {
+    position: relative;
+    width: min(90%, 420px);
+    padding: 38px 30px;
+    background: var(--cream);
+    border-radius: 14px;
+    text-align: center;
+
+    transform: translateY(20px) scale(0.96);
+    transition: transform 0.3s ease;
+}
+
+.newsletter-popup.show .newsletter-popup-box {
+    transform: translateY(0) scale(1);
+}
+
+.newsletter-popup-icon {
+    width: 58px;
+    height: 58px;
+    margin: 0 auto 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background: var(--brown-dark);
+    color: var(--cream);
+
+    font-size: 28px;
+}
+
+.newsletter-popup-box h3 {
+    margin: 0 0 10px;
+    font-family: "Playfair Display", serif;
+    font-size: 28px;
+    color: var(--brown-dark);
+}
+
+.newsletter-popup-box p {
+    margin: 0 auto 24px;
+    max-width: 330px;
+    line-height: 1.6;
+    color: var(--brown-dark);
+}
+
+.newsletter-popup-ok {
+    border: none;
+    padding: 11px 25px;
+
+    background: var(--brown-dark);
+    color: var(--cream);
+
+    border-radius: 6px;
+    cursor: pointer;
+
+    font-size: 14px;
+    transition: opacity 0.2s ease;
+}
+
+.newsletter-popup-ok:hover {
+    opacity: 0.85;
+}
+
+.newsletter-popup-close {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+
+    border: none;
+    background: transparent;
+
+    font-size: 27px;
+    line-height: 1;
+    color: var(--brown-dark);
+
+    cursor: pointer;
+}

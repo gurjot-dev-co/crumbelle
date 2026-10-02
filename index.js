@@ -36,14 +36,6 @@ async function startServer() {
     app.use(vite.middlewares);
     
     // const { Pool } = pg;   // destructuring    
-    // const pool = new pg.Pool ({
-    //     user: process.env.DB_USER,
-    //     host: process.env.DB_HOST,
-    //     database: process.env.DB_NAME,
-    //     password: process.env.DB_PASSWORD,
-    //     port: process.env.DB_PORT
-    // });
-    
 
     const pool = new pg.Pool(
         process.env.DATABASE_URL
@@ -716,6 +708,10 @@ async function startServer() {
     app.post("/subscribe", (req, res) => {
         const email = req.body.email;
         console.log(`Email Id = `+ email);
+        res.status(200).json({
+            success: true,
+            message: "Successfully subscribed"
+        })
     });
     
     app.listen(port, () => {
