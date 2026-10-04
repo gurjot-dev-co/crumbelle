@@ -397,19 +397,22 @@
         padding: 14px 12px 15px;
     }
     .product-name {
-        font-size: 0.95rem;
-        min-height: calc(0.95rem * 1.3 * 2);
+        font-size: 16px;
+        min-height: calc(16px * 1.3 * 2);
     }
     .product-description {
-        font-size: 0.68rem;
+        font-size: 13px;
+    }
+    .product-weight {
+        font-size: 12.5px;
     }
     .product-price {
-        font-size: 0.78rem;
+        font-size: 12.3px;
     }
     .add-to-cart-button {
-        min-height: 36px;
+        min-height: 26px;
         padding: 8px 11px;
-        font-size: 0.62rem;
+        font-size: 12px;
         letter-spacing: 0.7px;
     }
 }
@@ -429,15 +432,19 @@
         padding: 12px 10px 13px;
     }
     .product-name {
-        font-size: 0.85rem;
+        font-size: 19px;
+        min-height: calc(19px * 1.3 * 2);
     }
     .product-description {
-        font-size: 0.63rem;
+        font-size: 13px;
+        min-height: calc(13px * 1.55 * 5);
     }
     .add-to-cart-button {
         min-height: 34px;
         /* padding: 7px 10px; */
-        padding: 0 4px;
+        padding: 0;
+        padding-left: 4px;
+        padding-right: 4px;
         font-size: 8px;
         font-weight: 800;
         letter-spacing: 0.6px;

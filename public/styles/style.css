@@ -644,6 +644,7 @@ body {
         top: 50px;
         right: -80px;
         height: 330px;
+        filter: blur(0.7px);
     }
     .hero-image::after {
         bottom: -18%;
@@ -825,11 +826,11 @@ body {
         font-size: 16px;
     }
     .why-text h3 {
-        font-size: 7px;
+        font-size: 8px;
         letter-spacing: 0.3px;
     }
     .why-text p {
-        font-size: 6.7px;
+        font-size: 7.7px;
     }
 }
 
